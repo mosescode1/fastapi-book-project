@@ -1,5 +1,4 @@
-name: FastAPI Tests
-
+name: test
 on:
   pull_request:
     branches:
@@ -8,10 +7,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pull-requests: write
 
     steps:
       - name: Checkout repository
