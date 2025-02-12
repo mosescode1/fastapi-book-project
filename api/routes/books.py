@@ -57,6 +57,8 @@ async def update_book(book_id: int, book: Book) -> Book:
 
 @router.get("/{book_id}", response_model=Book, status_code=status.HTTP_200_OK)
 async def get_a_book(book_id: int) -> Book:
+
+
     book = db.get_book(book_id)
 
     if book is None:
